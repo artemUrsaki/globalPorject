@@ -1,0 +1,309 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 100%;
+    font-family: 'Kanit', sans-serif;
+    background-color: rgb(216, 251, 255);
+}
+
+main {
+    padding-top: 60px;
+}
+
+section {
+    padding: 5%;
+}
+
+li {
+    list-style: none;
+}
+
+/* FONT STYLES */
+
+/* link sytles */
+a {
+    text-decoration: none;
+    color: #00adef;
+}
+
+/* main title styles */
+h1 {
+    font-size: 100px;
+    color: rgb(187, 233, 255);
+    text-transform: uppercase;
+    line-height: 1em;
+}
+
+/* h2 title styles */
+h2 {
+    font-size: 60px;
+    color: #0e4e9c;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 5%;
+    line-height: 1.5em;
+}
+
+/* light text */
+.light {
+    color: rgb(187, 233, 255);
+}
+
+/* h3 styles */
+h3 {
+    font-size: 40px;
+    text-align: center;
+    color:#00adef;
+    line-height: 1em;
+    padding-bottom: 5%;
+}
+
+/* h4 styles */
+h4 {
+    color: rgb(187, 233, 255);
+    font-size: 20px;
+}
+
+/* paragraph styles */
+p, li {
+    font-size: 18px;
+    color: rgb(187, 233, 255);
+}
+
+/* buttons style */
+.btn {
+    display: block;
+    text-transform: uppercase;
+    background-color: transparent; 
+    color: #0e4e9c;
+    font-weight: 700;
+    font-size: 25px;
+    padding: 20px 70px;
+    border: 5px solid #0e4e9c;
+    border-radius: 20px;
+}
+
+.btn:hover {
+    background-color: #0e4e9c;
+    color: rgb(187, 233, 255);
+    border: 5px solid #0e4e9c;
+}
+
+@media screen and (max-width: 600px) {
+    
+    h1 {
+        font-size: 80px;
+    }
+    
+    h2 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    p, li {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 5% 7%;
+    }
+
+    .btn {
+        padding: 10px 40px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    
+    h1 {
+        font-size: 60px;
+    }
+    
+    h2 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .btn {
+        padding: 7px 30px;
+    }
+}
+
+
+
+/* MENU */
+
+
+
+header {
+    width: 100%;
+    position: fixed;
+    padding: 0 2%;
+    height: 60px;
+    background-color: rgb(0, 25, 71);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+}
+
+.menu {
+    display: flex;
+    padding: 0;
+}
+
+/* logo sytles */
+.logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* menu text styles */
+.menu li a {
+    display: block;
+    padding: 0 1vw;
+    text-decoration: underline #00abef00;
+    transition: .2s;
+}
+
+.menu li a:hover {
+    text-decoration: underline #00adef;
+}
+
+/* hamburger menu */
+.hamburger {
+    display: none;
+    color: #00adef;
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        padding: 0 5%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .menu {
+        position: absolute;
+        flex-direction: column;
+        padding: 0 5%;
+        opacity: 0;
+        width: 100%;
+        left: -100px;
+        top: 60px;
+        transition: .2s ease;
+    }
+
+    .menu.resp {
+        opacity:1;
+        height: auto;
+        left: 0;
+        background-color:rgb(0, 19, 54);
+    }
+
+    .menu li a {
+        padding: 1vh 0;
+    }
+
+    .menu li a:hover {
+        text-decoration: none;
+    }
+
+    /* hamburger menu */
+    .hamburger {
+        display: inline;
+    }
+}
+
+
+
+/* FOOTER */
+
+
+
+footer {
+    background-color: rgb(0, 25, 71);
+    padding: 2% 2% 1% 2%;
+    font-size: 12px;
+}
+
+/* text styles */
+footer p, footer li {
+    font-size: 12px;
+}
+
+/* footer paragraph */
+.rights p {
+    color: rgba(191, 235, 255, 0.363);
+}
+
+.img-text {
+    display: flex;
+    align-items: baseline;
+    gap: 1px;
+}
+
+.cit {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+footer li {
+    word-wrap: break-word;
+}
+
+/* div styles */
+.info {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.info div {
+    width: 30%;
+}
+
+.info .foot-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.rights {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    footer {
+        padding-top: 5%;
+    }
+
+    .info {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .info div {
+        width: 80%;
+    }
+
+    .info .foot-wrap {
+        width: 100%;
+    }
+}
